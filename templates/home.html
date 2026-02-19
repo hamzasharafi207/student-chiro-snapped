@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <div>
+        <h2>Snapped, but make it student athlete friendly.</h2>
+        <p>Student Chiro Snapped is a concept platform to help student athletes
+            discover chiropractors who understand sports injuries, training load,
+            and getting you back on the field.</p>
+        <a class="btn" href="{{ url_for('list_chiropractors') }}">
+            Find a demo chiropractor
+</a>
+
+        </a>
+    </div>
+    <div class="hero-card">
+        <h3>What this is</h3>
+        <ul>
+            <li>A demo project for exploring access to care.</li>
+            <li>Focused on student athletes and sports-context profiles.</li>
+            <li>Built as a portfolio piece, not a live service.</li>
+        </ul>
+    </div>
+</section>
+{% endblock %}

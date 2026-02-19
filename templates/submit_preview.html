@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section>
+    <h2>Preview Submission (Demo)</h2>
+
+    <p>This is a preview — nothing is saved.</p>
+
+    <ul>
+        {% for key, value in data.items() %}
+            <li><strong>{{ key }}:</strong> {{ value }}</li>
+        {% endfor %}
+    </ul>
+
+    <a class="btn" href="{{ url_for('submit_chiropractor') }}">Back to form</a>
+</section>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="profile">
+    <h2>{{ chiro.name }}</h2>
+    <p class="clinic">{{ chiro.clinic_name }} — {{ chiro.city }}</p>
+
+    <p>
+        {% if chiro.student_friendly %}<strong>Student-friendly pricing</strong><br>{% endif %}
+        {% if chiro.evening_hours %}<strong>Evening hours available</strong><br>{% endif %}
+        {% if chiro.price_range %}Price range: {{ chiro.price_range }}{% endif %}
+    </p>
+
+    <h3>Sports focus</h3>
+    <ul>
+        {% for s in sports_list %}
+            <li>{{ s }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>About</h3>
+    <p>{{ chiro.bio }}</p>
+
+    <hr>
+
+    <h3>Contact (Demo)</h3>
+    <p>
+        This is a demo project — contact is disabled.
+        In a real version this would link to the chiropractor’s booking page.
+    </p>
+</article>
+{% endblock %}

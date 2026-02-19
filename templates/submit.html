@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section>
+    <h2>Submit a Chiropractor (Demo)</h2>
+    <p>This is a demo form — it doesn't save to the database yet.</p>
+
+    <form method="post" class="filter-form">
+        <label>
+            Name
+            <input type="text" name="name" required>
+        </label>
+
+        <label>
+            Clinic name
+            <input type="text" name="clinic_name" required>
+        </label>
+
+        <label>
+            City
+            <input type="text" name="city" placeholder="e.g. London, ON" required>
+        </label>
+
+        <label>
+            Sports focus (comma-separated)
+            <input type="text" name="sports_focus" placeholder="e.g. lifting, soccer" required>
+        </label>
+
+        <label class="checkbox">
+            <input type="checkbox" name="student_friendly">
+            Student-friendly pricing
+        </label>
+
+        <label class="checkbox">
+            <input type="checkbox" name="evening_hours">
+            Evening hours
+        </label>
+
+        <label>
+            Price range
+            <input type="text" name="price_range" placeholder="$ (optional)">
+        </label>
+
+        <label>
+            Short bio
+            <input type="text" name="bio" placeholder="Very short description">
+        </label>
+
+        <button class="btn" type="submit">Preview submission</button>
+    </form>
+</section>
+{% endblock %}

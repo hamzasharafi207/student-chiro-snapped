@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Chiro Snapped</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<header>
+    <div class="container nav">
+        <h1><a href="{{ url_for('home') }}">Student Chiro Snapped</a></h1>
+        <nav>
+            <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('list_chiropractors') }}">Find Chiropractors</a>
+</nav>
+
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+    <div class="container footer-text">
+        <p>Demo project for educational purposes. Not a real healthcare service.</p>
+        <p>Do not submit personal health information. In an emergency, call 911.</p>
+    </div>
+</footer>
+</body>
+</html>

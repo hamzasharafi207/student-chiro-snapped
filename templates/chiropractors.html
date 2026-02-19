@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section>
+    <h2>Find Chiropractors (Demo)</h2>
+
+    <!-- Filter form -->
+    <form class="filter-form" method="get">
+        <label>
+            City
+            <input type="text" name="city" placeholder="e.g. London, ON"
+                   value="{{ filters.city }}">
+        </label>
+
+        <label>
+            Sport
+            <input type="text" name="sport" placeholder="e.g. soccer, lifting"
+                   value="{{ filters.sport }}">
+        </label>
+
+        <label class="checkbox">
+            <input type="checkbox" name="student_only"
+                   {% if filters.student_only %}checked{% endif %}>
+            Student-friendly pricing
+        </label>
+
+        <label class="checkbox">
+            <input type="checkbox" name="evenings_only"
+                   {% if filters.evenings_only %}checked{% endif %}>
+            Evening hours
+        </label>
+
+        <button class="btn" type="submit">Apply filters</button>
+    </form>
+
+    {% if chiropractors %}
+        <div class="cards">
+            {% for c in chiropractors %}
+                <article class="card">
+                    <h3>
+                        <a href="{{ url_for('chiro_profile', chiro_id=c.id) }}">
+                            {{ c.name }}
+                        </a>
+                    </h3>
+
+                    <p class="clinic">{{ c.clinic_name }} • {{ c.city }}</p>
+
+                    <p class="tagline">
+                        Sports focus: {{ c.sports_focus }}
+                    </p>
+
+                    <p class="meta">
+                        {% if c.student_friendly %}<span class="pill">Student-friendly</span>{% endif %}
+                        {% if c.evening_hours %}<span class="pill">Evening hours</span>{% endif %}
+                        {% if c.price_range %}<span class="pill">{{ c.price_range }}</span>{% endif %}
+                    </p>
+
+                    <p class="bio-snippet">
+                        {{ c.bio[:140] }}{% if c.bio|length > 140 %}...{% endif %}
+                    </p>
+
+                    <a class="link" href="{{ url_for('chiro_profile', chiro_id=c.id) }}">
+                        View profile →
+                    </a>
+                </article>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No chiropractors match these filters in this demo.</p>
+    {% endif %}
+</section>
+{% endblock %}

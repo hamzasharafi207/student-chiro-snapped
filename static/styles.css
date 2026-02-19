@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    background: #020617;
+    border-bottom: 1px solid #1f2937;
+    padding: 0.75rem 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a {
+    margin-left: 1rem;
+    font-size: 0.95rem;
+    color: #9ca3af;
+}
+
+nav a:hover {
+    color: #e5e7eb;
+}
+
+h1 a {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+main {
+    padding: 2rem 0 4rem;
+}
+
+/* Hero section */
+
+.hero {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.hero p {
+    color: #9ca3af;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.hero-card {
+    background: #020617;
+    border-radius: 1rem;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid #1f2937;
+}
+
+.hero-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.hero-card ul {
+    padding-left: 1.2rem;
+    color: #9ca3af;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    background: #22c55e;
+    color: #022c22;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 1px solid #4b5563;
+    color: #e5e7eb;
+}
+
+/* Find chiropractors page */
+
+h2 {
+    margin-bottom: 0.75rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background: #020617;
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid #1f2937;
+}
+
+.card h3 {
+    margin: 0 0 0.25rem;
+}
+
+.clinic {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+.meta {
+    margin: 0.25rem 0 0.5rem;
+}
+
+.pill {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    background: #111827;
+    border: 1px solid #374151;
+    margin-right: 0.25rem;
+}
+
+.bio-snippet {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    margin: 0.5rem 0 0.25rem;
+}
+
+.link {
+    font-size: 0.85rem;
+    color: #a5b4fc;
+}
+
+/* Profile page */
+
+.profile header h2,
+.profile h2 {
+    margin-bottom: 0.1rem;
+}
+
+.profile .clinic {
+    margin-bottom: 0.25rem;
+}
+
+.profile .meta {
+    margin-bottom: 1rem;
+}
+
+.list-inline {
+    list-style: none;
+    padding-left: 0;
+}
+
+.list-inline li {
+    display: inline-block;
+    margin-right: 0.35rem;
+    margin-bottom: 0.35rem;
+}
+
+/* Footer */
+
+footer {
+    border-top: 1px solid #1f2937;
+    padding: 1rem 0 1.5rem;
+    background: #020617;
+    font-size: 0.75rem;
+}
+
+.footer-text {
+    color: #6b7280;
+    line-height: 1.4;
+}
+
+/* Responsive tweaks */
+
+@media (max-width: 720px) {
+    .hero {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

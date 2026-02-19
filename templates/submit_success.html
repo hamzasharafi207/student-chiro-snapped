@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section>
+    <h2>Submission received (Demo)</h2>
+
+    <p>Your chiropractor profile has been added to the demo list.</p>
+
+    <p>
+        <a class="btn" href="{{ url_for('list_chiropractors') }}">
+            View in list →
+        </a>
+    </p>
+
+    <p>
+        <a class="btn btn-ghost" href="{{ url_for('submit_chiropractor') }}">
+            Submit another
+        </a>
+    </p>
+</section>
+{% endblock %}
